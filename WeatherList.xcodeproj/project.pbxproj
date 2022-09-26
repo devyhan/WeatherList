@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153D982B28E136B90098349F /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153D982A28E136B90098349F /* AppDIContainer.swift */; };
 		1590F3C528DD9AB500DFA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */; };
 		1590F3C928DD9AB500DFA9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590F3C828DD9AB500DFA9FC /* ViewController.swift */; };
 		1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */; };
@@ -26,8 +27,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7E6221BC28E0385B003E755B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1512D184202C65196499EDE6 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		153D982A28E136B90098349F /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		1590F3C128DD9AB500DFA9FC /* WeatherList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1590F3C828DD9AB500DFA9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153D982928E136890098349F /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				153D982A28E136B90098349F /* AppDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		1590F3B828DD9AB500DFA9FC = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +109,7 @@
 		1590F3C328DD9AB500DFA9FC /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
+				153D982928E136890098349F /* DIContainer */,
 				1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */,
 				1590F3C828DD9AB500DFA9FC /* ViewController.swift */,
 				1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */,
@@ -135,6 +159,7 @@
 				1590F3BE28DD9AB500DFA9FC /* Frameworks */,
 				1590F3BF28DD9AB500DFA9FC /* Resources */,
 				5712C85CBC5AD92261D199EA /* [CP] Embed Pods Frameworks */,
+				7E6221BC28E0385B003E755B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +210,7 @@
 				};
 			};
 			buildConfigurationList = 1590F3BC28DD9AB500DFA9FC /* Build configuration list for PBXProject "WeatherList" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -310,6 +335,7 @@
 			files = (
 				1590F3C928DD9AB500DFA9FC /* ViewController.swift in Sources */,
 				1590F3C528DD9AB500DFA9FC /* AppDelegate.swift in Sources */,
+				153D982B28E136B90098349F /* AppDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

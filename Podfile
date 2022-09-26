@@ -3,6 +3,13 @@ platform :ios, '12.0'
 target 'WeatherList' do
   use_frameworks!
 
+  # Modules
+  pod 'Data', :path => 'Modules/Data'
+  pod 'Domain', :path => 'Modules/Domain'
+  pod 'Infrastructure', :path => 'Modules/Infrastructure'
+  pod 'Presentation', :path => 'Modules/Presentation'
+
+  # 3rd Party
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
