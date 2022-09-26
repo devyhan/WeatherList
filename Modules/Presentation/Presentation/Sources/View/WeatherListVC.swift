@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 public final class WeatherListVC: UIViewController {
   
@@ -21,15 +23,13 @@ public final class WeatherListVC: UIViewController {
     
     setViews()
     setConstraint()
+    setBindings()
   }
   
   private func setViews() {
     view.backgroundColor = .white
     
     view.addSubview(text)
-    
-
-    
   }
   
   private func setConstraint() {
@@ -38,5 +38,8 @@ public final class WeatherListVC: UIViewController {
       make.centerY.equalToSuperview()
     }
   }
+  
+  private func setBindings() {
+    
+  }
 }
-

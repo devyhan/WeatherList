@@ -1,12 +1,25 @@
 PODS:
+  - Container (1.0.0)
   - Data (1.0.0):
+    - Container
     - Domain
-  - Domain (1.0.0)
-  - Infrastructure (1.0.0)
+    - Infrastructure
+    - RxSwift
+    - Utils
+  - Domain (1.0.0):
+    - Container
+    - RxSwift
+  - Infrastructure (1.0.0):
+    - Container
+    - RxSwift
+    - Utils
   - Nimble (10.0.0)
   - Presentation (1.0.0):
     - Domain
+    - RxCocoa
+    - RxSwift
     - SnapKit
+    - Utils
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -22,8 +35,10 @@ PODS:
   - RxTest (6.5.0):
     - RxSwift (= 6.5.0)
   - SnapKit (5.6.0)
+  - Utils (1.0.0)
 
 DEPENDENCIES:
+  - Container (from `Modules/Container`)
   - Data (from `Modules/Data`)
   - Domain (from `Modules/Domain`)
   - Infrastructure (from `Modules/Infrastructure`)
@@ -33,6 +48,7 @@ DEPENDENCIES:
   - RxSwift
   - RxTest
   - SnapKit
+  - Utils (from `Modules/Utils`)
 
 SPEC REPOS:
   trunk:
@@ -45,6 +61,8 @@ SPEC REPOS:
     - SnapKit
 
 EXTERNAL SOURCES:
+  Container:
+    :path: Modules/Container
   Data:
     :path: Modules/Data
   Domain:
@@ -53,20 +71,24 @@ EXTERNAL SOURCES:
     :path: Modules/Infrastructure
   Presentation:
     :path: Modules/Presentation
+  Utils:
+    :path: Modules/Utils
 
 SPEC CHECKSUMS:
-  Data: 0be852a8321c938b1bd1704b75f53deea8dd4814
-  Domain: ecb18ae008ddbbd01bcbbebe0d73ceb746f72050
-  Infrastructure: 508ba42f04a0b058377355ff43cab68166b07a9a
+  Container: 7ad462d2c340df38337642b279171753f5161f0e
+  Data: faeb0f52a7506df11320f3cd8eb0f78e62a3e9a6
+  Domain: 19236ebb96c7ed100df05914ef8acc77b3780481
+  Infrastructure: 2c6d6c77fd0bf2dbd5ce753d8466fc75593a5cb4
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
-  Presentation: c5a2ed32f94d40f5ac7c7247b64ac09a149624df
+  Presentation: 5be96040ebd37b4855b72430c0eb15884740373e
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxNimble: 04caf11bd7e8f7669d68ef69b8fdfe41552c1ef2
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Utils: 890aafc4e527759118cb62f776402f247052c70e
 
-PODFILE CHECKSUM: 6e1f7e8d185de295729dc6e99c3e9cc5e40ec01e
+PODFILE CHECKSUM: d25aa0449cc65a20bf9c2fcd32693c98a8cf88fa
 
 COCOAPODS: 1.11.3

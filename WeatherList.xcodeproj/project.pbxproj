@@ -14,6 +14,7 @@
 		1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */; };
 		1590F3DF28DDA21200DFA9FC /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590F3DE28DDA21200DFA9FC /* Tests.swift */; };
 		1EDB8B02A24DCEE1EFA7ED9A /* Pods_WeatherList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4611510D864CB363FCA3D1BD /* Pods_WeatherList.framework */; };
+		7E16A82728E1E6A700555018 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E16A82628E1E6A700555018 /* Secrets.plist */; };
 		DC1D3A9BC8DA7C9F699C16A9 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1512D184202C65196499EDE6 /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		601C2CAA59294BAB081D7A9A /* Pods-WeatherList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherList.debug.xcconfig"; path = "Target Support Files/Pods-WeatherList/Pods-WeatherList.debug.xcconfig"; sourceTree = "<group>"; };
 		66FCFE0C2561AE1B5CDF2691 /* Pods-WeatherList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherList.release.xcconfig"; path = "Target Support Files/Pods-WeatherList/Pods-WeatherList.release.xcconfig"; sourceTree = "<group>"; };
 		686F1F68B791812E94F4690F /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E16A82628E1E6A700555018 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		F74A82DAAD2D9EE06355E044 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */,
 				1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */,
 				1590F3D228DD9AB600DFA9FC /* Info.plist */,
+				7E16A82628E1E6A700555018 /* Secrets.plist */,
 			);
 			path = WeatherList;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */,
+				7E16A82728E1E6A700555018 /* Secrets.plist in Resources */,
 				1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,15 +9,15 @@ import Presentation
 import UIKit
 import RxSwift
 
-import Infrastructure
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
+  private let diContainer = DIContainer()
   var window: UIWindow?
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    let viewController = WeatherListVC()
+//    let viewController = WeatherListVC()
+    let viewController = ViewController()
     
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UINavigationController(rootViewController: viewController)

@@ -16,6 +16,13 @@ Data Module
 
   s.source_files = 'Data/**/*.{m,h,swift}'
 
+  # 3rd Party
+  s.dependency 'RxSwift'
+
+  # Modules
+  s.dependency 'Container'
   s.dependency 'Domain'
+  s.dependency 'Infrastructure'
+  s.dependency 'Utils'
 
 end

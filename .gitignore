@@ -59,3 +59,6 @@ xcuserdata/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,cocoapods
+
+# Secrets
+WeatherList/**/Secrets.plist

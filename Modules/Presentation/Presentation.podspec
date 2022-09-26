@@ -17,7 +17,13 @@ Presentation Module
   s.source_files = 'Presentation/**/*.{m,h,swift}'
   s.resources = "Presentation/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
-  s.dependency 'Domain'
+  # 3rd Party
   s.dependency 'SnapKit'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
+
+  # Modules
+  s.dependency 'Domain'
+  s.dependency 'Utils'
 
 end

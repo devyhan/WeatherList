@@ -16,4 +16,7 @@ Domain Module
 
   s.source_files = 'Domain/**/*.{m,h,swift}'
 
+  s.dependency 'RxSwift'
+  s.dependency 'Container'
+
 end
