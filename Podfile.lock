@@ -1,20 +1,20 @@
 PODS:
-  - Container (1.0.0)
+  - Container (1.0.0):
+    - Data
+    - Domain
   - Data (1.0.0):
-    - Container
     - Domain
     - Infrastructure
     - RxSwift
     - Utils
   - Domain (1.0.0):
-    - Container
     - RxSwift
   - Infrastructure (1.0.0):
-    - Container
     - RxSwift
     - Utils
   - Nimble (10.0.0)
   - Presentation (1.0.0):
+    - Container
     - Domain
     - RxCocoa
     - RxSwift
@@ -75,12 +75,12 @@ EXTERNAL SOURCES:
     :path: Modules/Utils
 
 SPEC CHECKSUMS:
-  Container: 7ad462d2c340df38337642b279171753f5161f0e
-  Data: faeb0f52a7506df11320f3cd8eb0f78e62a3e9a6
-  Domain: 19236ebb96c7ed100df05914ef8acc77b3780481
-  Infrastructure: 2c6d6c77fd0bf2dbd5ce753d8466fc75593a5cb4
+  Container: d60f4d80ee54998feb229c753b9eba88960af73b
+  Data: 159e9d41a0cc52b20b0cfd2fcba4e612be800df4
+  Domain: 352938e0a9c5abe2a039428155bed62641ecf3ea
+  Infrastructure: 0cf08add9edd24043f8ab722e508f98b44e859a1
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
-  Presentation: 5be96040ebd37b4855b72430c0eb15884740373e
+  Presentation: 203f757c95753c9e8ff74f39fa36df62b00fbc91
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxNimble: 04caf11bd7e8f7669d68ef69b8fdfe41552c1ef2
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd

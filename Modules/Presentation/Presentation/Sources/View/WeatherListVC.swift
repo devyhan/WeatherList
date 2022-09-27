@@ -11,12 +11,7 @@ import RxSwift
 import RxCocoa
 
 public final class WeatherListVC: UIViewController {
-  
-  private var text: UILabel = {
-    let label = UILabel()
-    label.text = "Title"
-    return label
-  }()
+  private var viewModel = WeatherListVM()
  
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,14 +24,10 @@ public final class WeatherListVC: UIViewController {
   private func setViews() {
     view.backgroundColor = .white
     
-    view.addSubview(text)
   }
   
   private func setConstraint() {
-    text.snp.makeConstraints { make in
-      make.centerX.equalToSuperview()
-      make.centerY.equalToSuperview()
-    }
+    
   }
   
   private func setBindings() {

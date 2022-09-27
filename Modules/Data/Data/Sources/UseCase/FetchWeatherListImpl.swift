@@ -24,7 +24,7 @@ public final class FetchWeatherListImpl: FetchWeatherList {
   public func execute(city: String) -> Observable<FiveDaysWeather> {
     let baseUrl = getSecrets.execute(secretKey: "BASE_URL")
     let apiKey = getSecrets.execute(secretKey: "API_KEY")
-    let url = "\(baseUrl)/data/2.5/forecast?q=London&appid=\(apiKey)"
+    let url = "\(baseUrl)/data/2.5/forecast?q=\(city)&appid=\(apiKey)"
     
     return apiClient
       .buildRequest(url: url)
@@ -39,6 +39,3 @@ public final class FetchWeatherListImpl: FetchWeatherList {
       .map { self.translate($0) }
   }
 }
-
-
-// 386e1bc19028d0b571ae5369d42e5ccc

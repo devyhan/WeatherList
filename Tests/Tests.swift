@@ -5,6 +5,7 @@
 //  Created by 이재원 on 2022/09/23.
 //
 
+import Container
 import XCTest
 import RxSwift
 import RxCocoa
@@ -14,13 +15,18 @@ import RxTest
 @testable import WeatherList
 
 final class Tests: XCTestCase {
+  var injected: DependencyInjection?
 
   // Given
   override func setUp() {
-    
+    injected = DependencyInjection.assembly
   }
   
   func test_sample() {
-    XCTAssertEqual(1+1, 2)
+    // When
+    guard let injectedString = injected?.repository.sampleDomain.execute() else { return }
+    
+    // Then
+    XCTAssertEqual("Injected Mock SampleDependency", injectedString)
   }
 }

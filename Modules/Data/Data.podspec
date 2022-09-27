@@ -20,7 +20,6 @@ Data Module
   s.dependency 'RxSwift'
 
   # Modules
-  s.dependency 'Container'
   s.dependency 'Domain'
   s.dependency 'Infrastructure'
   s.dependency 'Utils'

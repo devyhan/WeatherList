@@ -17,7 +17,6 @@ Data Module
   s.source_files = 'Infrastructure/**/*.{m,h,swift}'
 
   s.dependency 'RxSwift'
-  s.dependency 'Container'
   s.dependency 'Utils'
 
 end

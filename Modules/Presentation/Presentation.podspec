@@ -25,5 +25,6 @@ Presentation Module
   # Modules
   s.dependency 'Domain'
   s.dependency 'Utils'
+  s.dependency 'Container'
 
 end
