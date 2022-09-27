@@ -10,6 +10,7 @@
 		153D986428E2B71F0098349F /* LondonFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986328E2B71F0098349F /* LondonFiveDays.json */; };
 		153D986628E2BA320098349F /* SeoulFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986528E2BA320098349F /* SeoulFiveDays.json */; };
 		153D986828E2BA660098349F /* ChicagoFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986728E2BA660098349F /* ChicagoFiveDays.json */; };
+		153D986928E2C22A0098349F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 153D986228E2B6D40098349F /* Secrets.plist */; };
 		1590F3C528DD9AB500DFA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */; };
 		1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */; };
 		1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */; };
@@ -230,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153D986928E2C22A0098349F /* Secrets.plist in Resources */,
 				1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */,
 				153D986828E2BA660098349F /* ChicagoFiveDays.json in Resources */,
 				1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */,
@@ -489,6 +491,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CMQV98DW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -518,6 +521,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CMQV98DW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

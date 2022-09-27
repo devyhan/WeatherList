@@ -8,6 +8,7 @@
 import Domain
 import Infrastructure
 import RxSwift
+import Utils
 
 public final class FetchWeatherListImpl: FetchWeatherList {
   private let apiClient: APIClient
@@ -25,7 +26,10 @@ public final class FetchWeatherListImpl: FetchWeatherList {
   public func execute(city: String) -> Observable<FiveDaysWeather> {
     let baseUrl = getSecrets.execute(secretKey: "BASE_URL")
     let apiKey = getSecrets.execute(secretKey: "API_KEY")
-    let url = "\(baseUrl)/data/2.5/forecast?q=\(city)&appid=\(apiKey)"
+    let units = Locale.current.temperatureUnit == .fahrenheit ? "imperial" : "metric"
+    let language = Locale.current.currentDeviceLanguage
+    
+    let url = "\(baseUrl)/data/2.5/forecast?q=\(city)&appid=\(apiKey)&units=\(units)&lang=\(language)"
     
     return apiClient
       .buildRequest(url: url)

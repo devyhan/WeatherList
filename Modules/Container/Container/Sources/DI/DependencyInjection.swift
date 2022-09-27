@@ -1,6 +1,6 @@
 //
-//  AppDIContainer.swift
-//  WeatherList
+//  DependencyInjection.swift
+//  Container
 //
 //  Created by 조요한 on 2022/09/26.
 //
@@ -18,19 +18,16 @@ public final class DependencyInjection {
 }
 
 public protocol RepositoryInjectionType {
-  var sampleDomain: SampleDomain { get }
   var fetchWeatherList: FetchWeatherList { get }
 }
 
 public final class RepositoryInjection: RepositoryInjectionType {
-  lazy private(set) public var sampleDomain: SampleDomain = SampleDomainImpl()
   lazy private(set) public var fetchWeatherList: FetchWeatherList = FetchWeatherListImpl(apiClient: APIClientImpl(), getSecrets: GetSecretsImpl())
   
   public init() { }
 }
 
 public final class MockRepositoryInjection: RepositoryInjectionType {
-  lazy private(set) public var sampleDomain: SampleDomain = MockSampleDomain()
   lazy private(set) public var fetchWeatherList: FetchWeatherList = MockFetchWeatherList(mockClient: MockClientImpl())
   
   public init() { }
@@ -50,32 +47,4 @@ public extension DependencyInjection {
       )
     }
   }()
-}
-
-extension ProcessInfo {
-  var isRunningForTests: Bool {
-    ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
-  }
-}
-
-// MARK: - Sample
-
-public protocol SampleDomain: Injectable {
-  func execute() -> String
-}
-
-public final class SampleDomainImpl: SampleDomain {
-  public init() {}
-  
-  public func execute() -> String {
-    "Injected SampleDependency"
-  }
-}
-
-public final class MockSampleDomain: SampleDomain {
-  public init() {}
-  
-  public func execute() -> String {
-    "Injected Mock SampleDependency"
-  }
 }

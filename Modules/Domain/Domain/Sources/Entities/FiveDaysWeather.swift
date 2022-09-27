@@ -8,8 +8,8 @@
 import Foundation
 
 public struct FiveDaysWeather: Equatable {
-  let city: String
-  let weather: [Weather]
+  public let city: String
+  public let weather: [Weather]
   
   public init(
     city: String,
@@ -21,11 +21,11 @@ public struct FiveDaysWeather: Equatable {
 }
 
 public struct Weather: Equatable {
-  let icon: String
-  let status: String
-  let teempMax: Double
-  let teempMin: Double
-  let date: Date?
+  public let icon: String
+  public let status: String
+  public let teempMax: Double
+  public let teempMin: Double
+  public let date: Date?
   
   public init(
     icon: String,
