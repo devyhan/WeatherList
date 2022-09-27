@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		153D984628E275800098349F /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 153D984528E275800098349F /* Secrets.plist */; };
+		153D986428E2B71F0098349F /* LondonFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986328E2B71F0098349F /* LondonFiveDays.json */; };
+		153D986628E2BA320098349F /* SeoulFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986528E2BA320098349F /* SeoulFiveDays.json */; };
+		153D986828E2BA660098349F /* ChicagoFiveDays.json in Resources */ = {isa = PBXBuildFile; fileRef = 153D986728E2BA660098349F /* ChicagoFiveDays.json */; };
 		1590F3C528DD9AB500DFA9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */; };
 		1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */; };
 		1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */; };
@@ -41,7 +43,10 @@
 
 /* Begin PBXFileReference section */
 		1512D184202C65196499EDE6 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		153D984528E275800098349F /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Secrets.plist; path = ../../../.Trash/Secrets.plist; sourceTree = "<group>"; };
+		153D986228E2B6D40098349F /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		153D986328E2B71F0098349F /* LondonFiveDays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LondonFiveDays.json; sourceTree = "<group>"; };
+		153D986528E2BA320098349F /* SeoulFiveDays.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SeoulFiveDays.json; sourceTree = "<group>"; };
+		153D986728E2BA660098349F /* ChicagoFiveDays.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChicagoFiveDays.json; sourceTree = "<group>"; };
 		1590F3C128DD9AB500DFA9FC /* WeatherList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,11 +104,14 @@
 		1590F3C328DD9AB500DFA9FC /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
-				1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */,
+				153D986328E2B71F0098349F /* LondonFiveDays.json */,
+				153D986528E2BA320098349F /* SeoulFiveDays.json */,
+				153D986728E2BA660098349F /* ChicagoFiveDays.json */,
 				1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */,
 				1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */,
+				153D986228E2B6D40098349F /* Secrets.plist */,
 				1590F3D228DD9AB600DFA9FC /* Info.plist */,
-				153D984528E275800098349F /* Secrets.plist */,
+				1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */,
 			);
 			path = WeatherList;
 			sourceTree = "<group>";
@@ -223,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1590F3D128DD9AB600DFA9FC /* LaunchScreen.storyboard in Resources */,
-				153D984628E275800098349F /* Secrets.plist in Resources */,
+				153D986828E2BA660098349F /* ChicagoFiveDays.json in Resources */,
 				1590F3CE28DD9AB600DFA9FC /* Assets.xcassets in Resources */,
+				153D986428E2B71F0098349F /* LondonFiveDays.json in Resources */,
+				153D986628E2BA320098349F /* SeoulFiveDays.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

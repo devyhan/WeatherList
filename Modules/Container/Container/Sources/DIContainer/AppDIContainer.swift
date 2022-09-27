@@ -19,16 +19,19 @@ public final class DependencyInjection {
 
 public protocol RepositoryInjectionType {
   var sampleDomain: SampleDomain { get }
+  var fetchWeatherList: FetchWeatherList { get }
 }
 
 public final class RepositoryInjection: RepositoryInjectionType {
   lazy private(set) public var sampleDomain: SampleDomain = SampleDomainImpl()
+  lazy private(set) public var fetchWeatherList: FetchWeatherList = FetchWeatherListImpl(apiClient: APIClientImpl(), getSecrets: GetSecretsImpl())
   
   public init() { }
 }
 
 public final class MockRepositoryInjection: RepositoryInjectionType {
   lazy private(set) public var sampleDomain: SampleDomain = MockSampleDomain()
+  lazy private(set) public var fetchWeatherList: FetchWeatherList = MockFetchWeatherList(mockClient: MockClientImpl())
   
   public init() { }
 }

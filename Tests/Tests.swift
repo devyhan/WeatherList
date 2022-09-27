@@ -29,4 +29,17 @@ final class Tests: XCTestCase {
     // Then
     XCTAssertEqual("Injected Mock SampleDependency", injectedString)
   }
+  
+  func test_fetchWeatherList() {
+    guard let injected else { return }
+    
+    let fetchSeoulData = injected.repository.fetchWeatherList.execute(city: "Seoul")
+    dump(fetchSeoulData)
+    
+    let fetchLondonData = injected.repository.fetchWeatherList.execute(city: "London")
+    dump(fetchLondonData)
+    
+    let fetchChicagoData = injected.repository.fetchWeatherList.execute(city: "Chicago")
+    dump(fetchChicagoData)
+  }
 }

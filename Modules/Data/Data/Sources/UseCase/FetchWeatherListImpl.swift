@@ -12,6 +12,7 @@ import RxSwift
 public final class FetchWeatherListImpl: FetchWeatherList {
   private let apiClient: APIClient
   private let getSecrets: GetSecrets
+  private let translator: FetchWeatherListTranslatorType = FetchWeatherListTranslator()
   
   public init(
     apiClient: APIClient,
@@ -36,6 +37,6 @@ public final class FetchWeatherListImpl: FetchWeatherList {
         else { throw NSError(domain: "Decoding error", code: -1, userInfo: nil) }
         return response
       }
-      .map { self.translate($0) }
+      .map { self.translator.execute($0) }
   }
 }
