@@ -8,16 +8,16 @@
 import Foundation
 
 public protocol APIClient {
-  func buildRequest(url: String) -> RequestBuilder
+  func buildRequest(url: URL?) -> RequestBuilder
 }
 
 public final class APIClientImpl: APIClient {
   
   public init() {}
   
-  public func buildRequest(url: String) -> RequestBuilder {
+  public func buildRequest(url: URL?) -> RequestBuilder {
     let url: URL = {
-      guard let url = URL(string: url) else { return URL(string: "")! }
+      guard let url else { return URL(string: "")! }
       return url
     }()
     let requestURL = URLRequest(url: url)

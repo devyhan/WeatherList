@@ -29,7 +29,21 @@ public final class FetchWeatherListImpl: FetchWeatherList {
     let units = Locale.current.temperatureUnit == .fahrenheit ? "imperial" : "metric"
     let language = Locale.current.currentDeviceLanguage
     
-    let url = "\(baseUrl)/data/2.5/forecast?q=\(city)&appid=\(apiKey)&units=\(units)&lang=\(language)"
+    let url = URL {
+      Scheme(.https)
+      Host(baseUrl)
+      Path("data")
+      Path("2.5")
+      Path("forecast")
+      Query(
+        queryPrameters: [
+          "q": city,
+          "appid": apiKey,
+          "units": units,
+          "lang": language
+        ]
+      )
+    }
     
     return apiClient
       .buildRequest(url: url)
