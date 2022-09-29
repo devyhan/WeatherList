@@ -146,7 +146,7 @@ extension WeatherListVC: UIScrollViewDelegate, UITableViewDelegate {
   
   public func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     guard let header = view as? UITableViewHeaderFooterView else { return }
-    header.textLabel?.textColor = UIColor.black
+    header.textLabel?.textColor = UIColor(assetName: .backgroundReverse)
     header.textLabel?.layer.opacity = 0.7
     header.textLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
   }

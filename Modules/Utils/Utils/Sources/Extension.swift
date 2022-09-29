@@ -80,13 +80,13 @@ public extension Locale {
 
 import UIKit
 
-extension UIWindow {
+public extension UIWindow {
   
-  public var visibleViewController: UIViewController? {
+  var visibleViewController: UIViewController? {
     return self.visibleViewControllerFrom(vc: self.rootViewController)
   }
   
-  public func visibleViewControllerFrom(vc: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+  func visibleViewControllerFrom(vc: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
     if let nc = vc as? UINavigationController {
       return self.visibleViewControllerFrom(vc: nc.visibleViewController)
     } else if let tc = vc as? UITabBarController {
@@ -98,5 +98,13 @@ extension UIWindow {
         return vc
       }
     }
+  }
+}
+
+// MARK: - UIColor
+
+public extension UIColor {
+  convenience init?(assetName: Colors) {
+    self.init(named: assetName.rawValue)
   }
 }

@@ -16,6 +16,7 @@ final class WeatherListCell: UITableViewCell {
   private var iconView: UIImageView = {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFit
+    imageView.tintColor = UIColor(assetName: .backgroundReverse)
     return imageView
   }()
   
