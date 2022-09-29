@@ -52,9 +52,12 @@
 
    ### Infrastructure
    - Network통신을 위한 Implementation가 포함됩니다.
+   
+   ### Container
+   - Dependency Injection Container가 포함되며, PropertyWrapper를 통한 Injected Wrapper가 존재합니다.
 
    ### Test(Unit Test)
-   - ViewModel의 로직을 검증하며 기존 코드의 유효성을 검증하며, 코드 추가시에 발생할 수 있는 사이트 이팩트를 줄일수 있는 Test Case들이 포함됩니다.
+   - ViewModel의 로직을 검증하 기존 코드의 유효성을 검증하며, 코드 추가시에 발생할 수 있는 사이드 이팩트를 줄일 수 있는 Test Case들이 포함됩니다.
 
   ## Tree
 
@@ -109,7 +112,7 @@ WeatherList
     ├── Secrets.plist
     └── SeoulFiveDays.json
 
-Moduls
+Modules
 ├── Container
 │   ├── Container
 │   │   ├── Container.h
