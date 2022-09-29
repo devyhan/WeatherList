@@ -7,6 +7,7 @@ PODS:
     - Infrastructure
     - RxSwift
     - Utils
+  - Differentiator (5.0.0)
   - Domain (1.0.0):
     - RxSwift
   - Infrastructure (1.0.0):
@@ -16,13 +17,22 @@ PODS:
   - Presentation (1.0.0):
     - Container
     - Domain
+    - RxAppState
     - RxCocoa
+    - RxDataSources
     - RxSwift
     - SnapKit
     - Utils
+  - RxAppState (1.7.1):
+    - RxCocoa (~> 6.2)
+    - RxSwift (~> 6.2)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
   - RxNimble/Core (6.0.0):
     - Nimble (~> 10.0)
     - RxSwift (~> 6.0)
@@ -43,7 +53,9 @@ DEPENDENCIES:
   - Domain (from `Modules/Domain`)
   - Infrastructure (from `Modules/Infrastructure`)
   - Presentation (from `Modules/Presentation`)
+  - RxAppState
   - RxCocoa
+  - RxDataSources (~> 5.0)
   - RxNimble/RxTest
   - RxSwift
   - RxTest
@@ -52,8 +64,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Differentiator
     - Nimble
+    - RxAppState
     - RxCocoa
+    - RxDataSources
     - RxNimble
     - RxRelay
     - RxSwift
@@ -77,11 +92,14 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Container: d60f4d80ee54998feb229c753b9eba88960af73b
   Data: 159e9d41a0cc52b20b0cfd2fcba4e612be800df4
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   Domain: 352938e0a9c5abe2a039428155bed62641ecf3ea
   Infrastructure: 0cf08add9edd24043f8ab722e508f98b44e859a1
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
-  Presentation: 203f757c95753c9e8ff74f39fa36df62b00fbc91
+  Presentation: 241f58b5be91aaee977f977d1d923ac5565cccfe
+  RxAppState: 9c34f951d4ff8b9034f84016fe766202365bceb2
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxNimble: 04caf11bd7e8f7669d68ef69b8fdfe41552c1ef2
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
@@ -89,6 +107,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Utils: 890aafc4e527759118cb62f776402f247052c70e
 
-PODFILE CHECKSUM: d25aa0449cc65a20bf9c2fcd32693c98a8cf88fa
+PODFILE CHECKSUM: edc8ee479dfaf3b062f05e619ce25858f19ec1e8
 
 COCOAPODS: 1.11.3

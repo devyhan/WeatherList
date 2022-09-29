@@ -30,6 +30,19 @@ public extension Date {
     dateFormatter.dateFormat = dateFormat
     return dateFormatter.string(from: self)
   }
+  
+  var toLocalizedRelativeDate: String {
+    let date = DateFormatter()
+    date.locale = Locale(identifier: Locale.current.identifier)
+    date.dateStyle = .full
+    // 오늘, 내일 만 상대날짜로 변경
+    if Date()...Date().addingTimeInterval(3600 * 24) ~= self {
+      date.doesRelativeDateFormatting = true
+    } else {
+      date.setLocalizedDateFormatFromTemplate("E d MMM")
+    }
+    return date.string(from: self)
+  }
 }
 
 // MARK: - ProcessInfo
@@ -60,5 +73,30 @@ public extension Locale {
     let language = preferredLanguage?.last?.lowercased() ?? "en"
     
     return language
+  }
+}
+
+// MARK: - UIWindow
+
+import UIKit
+
+extension UIWindow {
+  
+  public var visibleViewController: UIViewController? {
+    return self.visibleViewControllerFrom(vc: self.rootViewController)
+  }
+  
+  public func visibleViewControllerFrom(vc: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    if let nc = vc as? UINavigationController {
+      return self.visibleViewControllerFrom(vc: nc.visibleViewController)
+    } else if let tc = vc as? UITabBarController {
+      return self.visibleViewControllerFrom(vc: tc.selectedViewController)
+    } else {
+      if let pvc = vc?.presentedViewController {
+        return self.visibleViewControllerFrom(vc: pvc)
+      } else {
+        return vc
+      }
+    }
   }
 }

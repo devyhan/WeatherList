@@ -13,8 +13,10 @@ target 'WeatherList' do
 
   # 3rd Party
   pod 'SnapKit'
-  pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxSwift'
+  pod 'RxDataSources', '~> 5.0'
+  pod 'RxAppState'
 
   target 'Tests' do
     inherit! :search_paths

@@ -82,6 +82,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153D986D28E3D2D60098349F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		153D986E28E3D2DC0098349F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				153D986328E2B71F0098349F /* LondonFiveDays.json */,
+				153D986528E2BA320098349F /* SeoulFiveDays.json */,
+				153D986728E2BA660098349F /* ChicagoFiveDays.json */,
+				1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */,
+				1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */,
+				153D986228E2B6D40098349F /* Secrets.plist */,
+				1590F3D228DD9AB600DFA9FC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1590F3B828DD9AB500DFA9FC = {
 			isa = PBXGroup;
 			children = (
@@ -105,14 +127,8 @@
 		1590F3C328DD9AB500DFA9FC /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
-				153D986328E2B71F0098349F /* LondonFiveDays.json */,
-				153D986528E2BA320098349F /* SeoulFiveDays.json */,
-				153D986728E2BA660098349F /* ChicagoFiveDays.json */,
-				1590F3CD28DD9AB600DFA9FC /* Assets.xcassets */,
-				1590F3CF28DD9AB600DFA9FC /* LaunchScreen.storyboard */,
-				153D986228E2B6D40098349F /* Secrets.plist */,
-				1590F3D228DD9AB600DFA9FC /* Info.plist */,
-				1590F3C428DD9AB500DFA9FC /* AppDelegate.swift */,
+				153D986D28E3D2D60098349F /* App */,
+				153D986E28E3D2DC0098349F /* Resources */,
 			);
 			path = WeatherList;
 			sourceTree = "<group>";
@@ -493,7 +509,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2CMQV98DW6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherList/Info.plist;
+				INFOPLIST_FILE = WeatherList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
@@ -523,7 +539,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2CMQV98DW6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherList/Info.plist;
+				INFOPLIST_FILE = WeatherList/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;

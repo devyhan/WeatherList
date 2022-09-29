@@ -5,6 +5,7 @@
 //  Created by YHAN on 2022/09/25.
 //
 
+import Utils
 import RxSwift
 
 public protocol RequestBuilder {
@@ -59,12 +60,12 @@ final class RequestBuilderImpl: RequestBuilder {
     return Observable.create { emitter in
       self.fetch { result in
         switch result {
-          case let .success(data):
-            emitter.onNext(data)
-            emitter.onCompleted()
-          case let .failure(error):
-            emitter.onError(error)
-          }
+        case let .success(data):
+          emitter.onNext(data)
+          emitter.onCompleted()
+        case let .failure(error):
+          emitter.onError(error)
+        }
       }
       return Disposables.create()
     }
@@ -73,8 +74,28 @@ final class RequestBuilderImpl: RequestBuilder {
   private func fetch(onComplete: @escaping (Result<Data, Error>) -> Void) {
     URLSession.shared.dataTask(with: url) { data, res, err in
       if let err = err {
+        let err = err as NSError
+        switch err.code {
+        case NSURLErrorNotConnectedToInternet:
+          DispatchQueue.main.async {
+            let scenes = UIApplication.shared.windows
+            let window = scenes.first?.rootViewController
+            let alert = UIAlertController(title: "인터넷 연결을 확인해 주세요.", message: err.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+            let action = UIAlertAction(title: "확인", style: .default) { action in
+              if let settingUrl = URL(string:UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingUrl)
+              }
+              scenes.last?.removeFromSuperview()
+            }
+            alert.addAction(action)
+            window?.present(alert, animated: true, completion: nil)
+          }
+        default:
+          print("알 수 없는 문제")
+        }
         onComplete(.failure(err))
       }
+      
       guard let data = data else {
         if let statusCode = (res as? HTTPURLResponse)?.statusCode {
           switch statusCode {
@@ -88,7 +109,7 @@ final class RequestBuilderImpl: RequestBuilder {
         onComplete(.failure(NSError(domain: "no data",
                                     code: (res as? HTTPURLResponse)?.statusCode ?? 1,
                                     userInfo: nil)))
-       
+        
         return
       }
       onComplete(.success(data))

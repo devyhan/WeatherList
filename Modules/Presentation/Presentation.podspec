@@ -21,6 +21,8 @@ Presentation Module
   s.dependency 'SnapKit'
   s.dependency 'RxSwift'
   s.dependency 'RxCocoa'
+  s.dependency 'RxDataSources'
+  s.dependency 'RxAppState'
 
   # Modules
   s.dependency 'Domain'
