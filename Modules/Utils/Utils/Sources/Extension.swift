@@ -33,7 +33,9 @@ public extension Date {
   
   var toLocalizedRelativeDate: String {
     let date = DateFormatter()
-    date.locale = Locale(identifier: Locale.current.identifier)
+    if let locale = Locale.preferredLanguages.first {
+      date.locale = Locale(identifier: locale)
+    }
     date.dateStyle = .full
     // 오늘, 내일 만 상대날짜로 변경
     if Date()...Date().addingTimeInterval(3600 * 24) ~= self {
@@ -70,7 +72,7 @@ public extension Locale {
   var currentDeviceLanguage: String {
     let preferredLanguages = Locale.preferredLanguages.first
     let preferredLanguage = preferredLanguages?.components(separatedBy: "-")
-    let language = preferredLanguage?.last?.lowercased() ?? "en"
+    let language = preferredLanguage?.first?.lowercased() ?? "en"
     
     return language
   }
