@@ -1,0 +1,19 @@
+name: Run Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run test
+      run: |
+        pod install --repo-update --clean-install --project-directory=./
+        xcodebuild clean test -workspace WeatherList.xcworkspace -scheme WeatherList -destination 'platform=iOS Simulator,name=iPhone 12 Pro,OS=15.2'

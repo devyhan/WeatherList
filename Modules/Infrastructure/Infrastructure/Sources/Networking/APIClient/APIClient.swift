@@ -17,7 +17,7 @@ public final class APIClientImpl: APIClient {
   
   public func buildRequest(url: URL?) -> RequestBuilder {
     let url: URL = {
-      guard let url else { return URL(string: "")! }
+      guard let url = url else { return URL(string: "")! }
       return url
     }()
     let requestURL = URLRequest(url: url)

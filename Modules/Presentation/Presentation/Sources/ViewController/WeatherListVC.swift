@@ -106,7 +106,7 @@ public final class WeatherListVC: UIViewController {
   private func setBindings() {
     rx.viewDidAppear
       .subscribe(onNext: { [weak self] _ in
-        guard let self else { return }
+        guard let self = self else { return }
         self.viewDidLoadSubject.onNext(())
       })
       .disposed(by: disposeBag)

@@ -51,7 +51,7 @@ public extension Date {
 
 public extension ProcessInfo {
   var isRunningForTests: Bool {
-    ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+    return ProcessInfo.processInfo.environment["IS_UNIT_TESTING"] == "YES"
   }
 }
 
