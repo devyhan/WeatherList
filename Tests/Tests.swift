@@ -44,6 +44,10 @@ final class Tests: XCTestCase {
     }
   }
   
+  func test_failed_CITest() {
+    XCTAssertEqual(true, false)
+  }
+  
   // viewDidLoad가 트리거 될 경우, 데이터가 generateObject()에 의해 잘 생성 되는지 검증합니다.
   func test_viewDidLoad() {
     guard
