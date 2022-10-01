@@ -33,13 +33,18 @@ public protocol MockClient {
 }
 
 public final class MockClientImpl: MockClient {
+  
   public init() {
-    guard let timeZone = TimeZone(identifier: "Asia/Seoul") else { return }
-    TimeZone.ReferenceType.default = timeZone
-    TimeZone.ReferenceType.resetSystemTimeZone()
+    setTestingTimeZone()
   }
 
   public var buildMock: MockBuilder {
     return MockBuilderImpl()
+  }
+  
+  private func setTestingTimeZone() {
+    guard let timeZone = TimeZone(identifier: "Asia/Seoul") else { return }
+    TimeZone.ReferenceType.default = timeZone
+    TimeZone.ReferenceType.resetSystemTimeZone()
   }
 }

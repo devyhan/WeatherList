@@ -24,6 +24,7 @@ final class Tests: XCTestCase {
   var viewDidLoad: PublishSubject<Void>?
   var refreshControlAction: PublishSubject<Void>?
   var output: WeatherListVM.Output?
+  var mockSectionWeatherDate: [SectionWeatherData]?
   
   // Given
   override func setUp() {
@@ -33,29 +34,7 @@ final class Tests: XCTestCase {
     viewModel = WeatherListVM()
     viewDidLoad = PublishSubject<Void>()
     refreshControlAction = PublishSubject<Void>()
-    
-    if let viewModel = viewModel, let refreshControlAction = refreshControlAction, let viewDidLoad = viewDidLoad {
-      output = viewModel.transform(
-        input: .init(
-          viewDidLoad: viewDidLoad,
-          refreshControlAction: refreshControlAction
-        )
-      )
-    }
-  }
-  
-  func test_failed_CITest() {
-    XCTAssertEqual(true, false)
-  }
-  
-  // viewDidLoad가 트리거 될 경우, 데이터가 generateObject()에 의해 잘 생성 되는지 검증합니다.
-  func test_viewDidLoad() {
-    guard
-      let viewDidLoad = viewDidLoad, let viewModel = viewModel, let scheduler = scheduler, let output = output, let disposeBag = disposeBag,
-      let testCurrentDate = "2022-09-27".toDate(dateFormat: "yyyy-MM-dd")
-    else { return }
-    
-    let mockSectionWeatherDate = [
+    mockSectionWeatherDate = [
       SectionWeatherData(
         header: "Seoul",
         items: [
@@ -90,6 +69,23 @@ final class Tests: XCTestCase {
         ]
       )
     ]
+    
+    if let viewModel = viewModel, let refreshControlAction = refreshControlAction, let viewDidLoad = viewDidLoad {
+      output = viewModel.transform(
+        input: .init(
+          viewDidLoad: viewDidLoad,
+          refreshControlAction: refreshControlAction
+        )
+      )
+    }
+  }
+  
+  // viewDidLoad가 트리거 될 경우, 데이터가 generateObject()에 의해 잘 생성 되는지 검증합니다.
+  func test_viewDidLoad() {
+    guard
+      let viewDidLoad = viewDidLoad, let viewModel = viewModel, let scheduler = scheduler, let output = output, let disposeBag = disposeBag, let mockSectionWeatherDate = mockSectionWeatherDate,
+      let testCurrentDate = "2022-09-27".toDate(dateFormat: "yyyy-MM-dd")
+    else { return }
     
     // When
     viewModel.currentDate = testCurrentDate
