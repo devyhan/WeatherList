@@ -14,6 +14,7 @@
   ```
   
   WeatherList/WeatherList/Resources 해당 경로에 [Secrets.plist](https://drive.google.com/file/d/1EYT646D6XW0T6u8ksDMu55wFJR3IuL50/view?usp=sharing)를 다운받아 추가 해주어야 합니다.
+> WeatherList PROJECT > Build Phases > Copy Bundle Resources에 Secrets.plist가 잡혀야 합니다.
     
   ## Libraries
   |Name|Description|
